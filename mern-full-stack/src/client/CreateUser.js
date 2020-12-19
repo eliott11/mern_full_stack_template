@@ -50,7 +50,7 @@ class CreateUser extends Component {
             <div className="is-fluid">
                 {/*on form submit call handleSubmit()*/}
                 <form onSubmit={this.handleSubmit}>
-                    <h2 className="title is-1 has-text-primary">Create New User</h2>
+                    <h2 className="title is-1 has-text-primary">Create New Ski Station</h2>
                     <hr />
                     {/*main container for input fields*/}
                     <div className="container">
