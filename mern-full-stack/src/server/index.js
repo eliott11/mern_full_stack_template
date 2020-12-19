@@ -11,7 +11,7 @@ const dbname = 'CA2';
 server.use(express.static('dist'));
 
 // the URL to the DB will be loaded from an env variable or using the MongoDB Clour
-const dbroute = process.env.MONGODB_URL || `mongodb+srv://mongolo:<password>@cluster0.alm4f.mongodb.net/dbuser?retryWrites=true&w=majority`;
+const dbroute = process.env.MONGODB_URL || `mongodb+srv://mongolo:pswrd@cluster0.alm4f.mongodb.net/dbuser?retryWrites=true&w=majority`;
 
 let db;
 
