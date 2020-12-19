@@ -13,9 +13,7 @@ class EditUser extends Component {
         // these should match the user object from the API
         this.state = {
             title: '',
-            first: '',
-            lastName: '',
-            quote: '',
+            description: '',
             picture: ''
         };
 
@@ -34,9 +32,7 @@ class EditUser extends Component {
                 this.setState({
                     _id: response.data._id,
                     title: response.data.title,
-                    first: response.data.first,
-                    lastName: response.data.lastName,
-                    quote: response.data.quote,
+                    description: response.data.description,
                     picture: response.data.picture,
                 });
             })
@@ -87,30 +83,19 @@ class EditUser extends Component {
                                     </div>
                                 </div>
                                 <div className="field">
-                                    <label className="label"> First Name: </label>
+                                    <label className="label"> Description: </label>
                                     <div className="control">
-                                        <input className="input is-small" type="text" name="first" value={this.state.first} onChange={this.handleChange} id="form" />
+                                        <input className="input is-small" type="text" name="description" value={this.state.description} onChange={this.handleChange} id="form" />
                                     </div>
                                 </div>
-                                <div className="field">
-                                    <label className="label"> Picture: </label>
-                                    <div className="control">
-                                        <input className="input is-small" type="text" name="picture" value={this.state.picture} onChange={this.handleChange} id="form" />
-                                    </div>
-                                </div>
+                                
                             </div>
                             {/*SECOND COLUMN*/}
-                            <div className="column">
-                                <div className="field">
-                                    <label className="label"> Last Name: </label>
-                                    <div className="control">
-                                        <input className="input is-small" type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange} id="form" />
-                                    </div>
-                                </div>
-                                <div className="field">
-                                    <label className="label"> Quote: </label>
-                                    <div className="control">
-                                        <input className="input is-small" type="text" name="quote" value={this.state.quote} onChange={this.handleChange} id="form" />
+                                <div className="column">
+                                    <div className="field">
+                                            <label className="label"> Picture: </label>
+                                            <div className="control">
+                                                <input className="input is-small" type="text" name="picture" value={this.state.picture} onChange={this.handleChange} id="form" />
                                     </div>
                                 </div>
                             </div>

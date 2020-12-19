@@ -5,17 +5,18 @@ const bodyParser = require('body-parser');
 
 const server = express();
 // the value for dbname should match your database name
-const dbname = 'usersdb';
+const dbname = 'CA2';
 
 // serve files from the dist directory
 server.use(express.static('dist'));
 
 // the URL to the DB will be loaded from an env variable or using the MongoDB Clour
-const dbroute = process.env.MONGODB_URL || `mongodb+srv://erika:dorset@users-bm6td.mongodb.net/test?retryWrites=true&w=majority`;
+const dbroute = process.env.MONGODB_URL || `mongodb+srv://mongolo:<password>@cluster0.alm4f.mongodb.net/dbuser?retryWrites=true&w=majority`;
 
 let db;
 
-// connect to the DB and then start the expres server
+
+// connect to the DB and then start the express server
 MongoClient.connect(dbroute, (err, client) => {
   if (err) throw err;
 

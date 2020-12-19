@@ -12,9 +12,7 @@ class CreateUser extends Component {
         // the form fields are stored in a state
         this.state = { 
             title: '', 
-            first: '', 
-            lastName: '', 
-            quote: '', 
+            description: '', 
             picture: '' 
         };
 
@@ -58,42 +56,31 @@ class CreateUser extends Component {
                     <div className="container">
                     {/*FIRST COLUMN*/}
                     <div className="columns">
-                        <div className="column is-half">
-                            <div className="field">
-                                <label className="label"> Title: </label>
-                                <div className="control">
-                                    <input className="input is-small" type="text" name="title" value={this.state.title} onChange={this.handleChange} id="form" />
+                            <div className="column is-half">
+                                <div className="field">
+                                    <label className="label"> Title: </label>
+                                    <div className="control">
+                                        <input className="input is-small" type="text" name="title" value={this.state.title} onChange={this.handleChange} id="form" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="field">
-                                <label className="label"> First Name: </label>
-                                <div className="control">
-                                    <input className="input is-small" type="text" name="first" value={this.state.first} onChange={this.handleChange} id="form" />
+                                <div className="field">
+                                    <label className="label"> Description: </label>
+                                    <div className="control">
+                                        <input className="input is-small" type="text" name="description" value={this.state.description} onChange={this.handleChange} id="form" />
+                                    </div>
                                 </div>
+                                
                             </div>
-                             <div className="field">
-                                <label className="label"> Picture: </label>
-                                <div className="control">
-                                    <input className="input is-small" type="text" name="picture" value={this.state.picture} onChange={this.handleChange} id="form" />
-                                </div>
-                            </div>
-                        </div>
-                        {/*SECOND COLUMN*/}
-                        <div className="column">
-                            <div className="field">
-                                <label className="label"> Last Name: </label>
-                                <div className="control">
-                                    <input className="input is-small" type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange} id="form" />
-                                </div>
-                            </div>
-                            <div className="field">
-                                <label className="label"> Quote: </label>
-                                <div className="control">
-                                    <input className="input is-small" type="text" name="quote" value={this.state.quote} onChange={this.handleChange} id="form" />
+                            {/*SECOND COLUMN*/}
+                                <div className="column">
+                                    <div className="field">
+                                            <label className="label"> Picture: </label>
+                                            <div className="control">
+                                                <input className="input is-small" type="text" name="picture" value={this.state.picture} onChange={this.handleChange} id="form" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     {/*SUBMIT BUTTON*/}
                     <input className="button is-primary" type="submit" value="Submit" />
                     </div>
