@@ -93,9 +93,9 @@ class UserList extends Component {
                     </div>
                 </div>
                 {/*FOOTER*/}
-                <footer className="footer has-background-primary">
+                <footer className="footer has-background-primary" >
                     <div className="content has-text-centered">
-                        <p className="has-text-white-bis"><strong>Random User API</strong> styled with Bulma.</p>
+                        <p className="has-text-white-bis"><strong>Eliott API</strong> styled with Bulma.</p>
                     </div>
                 </footer>
             </div>
